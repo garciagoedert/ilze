@@ -13,9 +13,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest/dist/lucide.min.js"></script>
-
     <style>
         /* Estilo para usar a fonte Poppins */
         body {
@@ -58,8 +55,8 @@
             </a>
 
             <!-- Botão do Menu Mobile (Hambúrguer) -->
-            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 text-stone-800">
-                <i data-lucide="menu" class="w-6 h-6"></i>
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 text-stone-900">
+                <svg id="menu-icon-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
             </button>
         </div>
         
@@ -231,20 +228,18 @@
         // --- Script para o menu mobile (hambúrguer) ---
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = mobileMenuButton.querySelector('i'); // Seleciona o elemento do ícone
+        const menuIconSvg = document.getElementById('menu-icon-svg');
+
+        const menuSvg = `<svg id="menu-icon-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>`;
+        const closeSvg = `<svg id="menu-icon-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>`;
 
         mobileMenuButton.addEventListener('click', () => {
-            // Alterna a visibilidade do menu
             const isHidden = mobileMenu.classList.toggle('hidden');
-
-            // Alterna o ícone entre 'menu' (hambúrguer) e 'x' (fechar)
             if (isHidden) {
-                menuIcon.setAttribute('data-lucide', 'menu');
+                mobileMenuButton.innerHTML = menuSvg;
             } else {
-                menuIcon.setAttribute('data-lucide', 'x');
+                mobileMenuButton.innerHTML = closeSvg;
             }
-            // Renderiza novamente os ícones do Lucide para aplicar a mudança
-            lucide.createIcons();
         });
 
         // --- Fechar o menu mobile ao clicar em um link ---
@@ -252,14 +247,9 @@
         for (const link of mobileMenuLinks) {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
-                // Garante que o ícone volte a ser 'menu' ao fechar o menu clicando em um link
-                menuIcon.setAttribute('data-lucide', 'menu');
-                lucide.createIcons();
+                mobileMenuButton.innerHTML = menuSvg; // Garante que o ícone volte a ser 'menu'
             });
         }
-
-        // --- Ativar os ícones Lucide na carga inicial ---
-        lucide.createIcons();
 
         // --- Atualizar o ano no rodapé ---
         document.getElementById('current-year').textContent = new Date().getFullYear();

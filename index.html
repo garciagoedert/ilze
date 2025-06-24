@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilze Petris - Naturologia Integrativa</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/lucide.min.js"></script>
+
+    <style>
+        /* Estilo para usar a fonte Poppins */
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Cor de destaque */
+        .accent-color {
+            color: #0d9488; /* teal-600 */
+        }
+        .bg-accent-color {
+            background-color: #0d9488; /* teal-600 */
+        }
+        .bg-accent-hover:hover {
+            background-color: #0f766e; /* teal-700 */
+        }
+        .border-accent-color {
+            border-color: #0d9488;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-700">
+
+    <!-- =========== Header / Navegação =========== -->
+    <header class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#inicio" class="text-2xl font-bold text-stone-800">
+                Ilze Petris <span class="font-light accent-color">Naturologia</span>
+            </a>
+            
+            <!-- Navegação para Desktop -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#sobre" class="text-stone-600 hover:accent-color transition-colors duration-300">Sobre Mim</a>
+                <a href="#servicos" class="text-stone-600 hover:accent-color transition-colors duration-300">Serviços</a>
+                <a href="#contato" class="text-stone-600 hover:accent-color transition-colors duration-300">Contato</a>
+            </nav>
+
+            <a href="https://wa.me/5548912345678?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="hidden md:inline-block bg-accent-color text-white font-semibold px-5 py-2 rounded-full shadow-md hover:bg-accent-hover transition-transform duration-300 transform hover:scale-105">
+                Agendar Consulta
+            </a>
+
+            <!-- Botão do Menu Mobile (Hambúrguer) -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 text-stone-800">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+        
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-t border-stone-200">
+            <a href="#sobre" class="block text-center py-4 px-6 text-stone-600 hover:bg-teal-50 transition-colors duration-200">Sobre Mim</a>
+            <a href="#servicos" class="block text-center py-4 px-6 text-stone-600 hover:bg-teal-50 transition-colors duration-200">Serviços</a>
+            <a href="#contato" class="block text-center py-4 px-6 text-stone-600 hover:bg-teal-50 transition-colors duration-200">Contato</a>
+            <div class="p-4">
+                 <a href="https://wa.me/5548912345678?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="w-full text-center block bg-accent-color text-white font-semibold px-5 py-3 rounded-full shadow-md hover:bg-accent-hover transition-colors duration-300">
+                    Agendar Consulta
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- =========== Seção Inicial (Hero) =========== -->
+        <section id="inicio" class="pt-32 pb-20 bg-teal-50/50">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold text-stone-800 leading-tight">
+                        Encontre o seu <span class="accent-color">equilíbrio</span> natural.
+                    </h1>
+                    <p class="mt-6 text-lg text-stone-600 max-w-lg mx-auto md:mx-0">
+                        Através de terapias naturais e uma abordagem integrativa, ajudo você a restaurar a saúde e o bem-estar de forma completa e personalizada.
+                    </p>
+                    <div class="mt-8">
+                        <a href="https://wa.me/5548912345678?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="inline-block bg-accent-color text-white font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:bg-accent-hover transition-transform duration-300 transform hover:scale-105">
+                            Quero Agendar Minha Consulta
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://placehold.co/500x500/a7f3d0/333333?text=Ilze+Petris" alt="Foto de Ilze Petris" class="rounded-full shadow-2xl w-3/4 md:w-full max-w-sm">
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Seção Sobre Mim =========== -->
+        <section id="sobre" class="py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-stone-800">Sobre Mim</h2>
+                    <p class="text-lg text-stone-500 mt-2">Conheça minha jornada e minha filosofia de trabalho</p>
+                    <div class="mt-4 w-24 h-1 bg-accent-color mx-auto rounded"></div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/3">
+                        <img src="https://placehold.co/400x500/d1fae5/333333?text=Ilze+em+seu+consultório" alt="Ilze Petris em seu consultório" class="rounded-lg shadow-xl w-full">
+                    </div>
+                    <div class="md:w-2/3 text-stone-600 text-lg space-y-4">
+                        <p>Olá, eu sou Ilze Petris, uma apaixonada pela capacidade de autocura do corpo humano. Minha jornada na naturologia começou com um desejo profundo de entender a saúde além da ausência de doença, buscando a raiz dos desequilíbrios para promover uma vitalidade genuína.</p>
+                        <p>Acredito que cada indivíduo é único e, por isso, meu trabalho é baseado em uma abordagem holística e personalizada. Utilizo um conjunto de terapias naturais cientificamente embasadas para criar um plano de tratamento que respeita sua história, seu corpo e seus objetivos.</p>
+                        <p>Minha missão é ser uma facilitadora no seu processo de reconexão com a sua própria natureza, guiando você em um caminho de mais saúde, consciência e bem-estar duradouro.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Seção de Serviços =========== -->
+        <section id="servicos" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-stone-800">Serviços</h2>
+                    <p class="text-lg text-stone-500 mt-2">Como posso te ajudar a encontrar o bem-estar</p>
+                    <div class="mt-4 w-24 h-1 bg-accent-color mx-auto rounded"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card de Serviço 1 -->
+                    <div class="bg-stone-50/50 p-8 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border-t-4 border-accent-color">
+                        <div class="flex justify-center mb-4">
+                            <div class="bg-teal-100 p-3 rounded-full">
+                                <i data-lucide="eye" class="w-8 h-8 accent-color"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-center text-stone-800 mb-3">Iridologia</h3>
+                        <p class="text-stone-600 text-center">Análise da íris para identificar predisposições genéticas e desequilíbrios energéticos no corpo, permitindo um tratamento preventivo e focado.</p>
+                    </div>
+                    <!-- Card de Serviço 2 -->
+                    <div class="bg-stone-50/50 p-8 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border-t-4 border-accent-color">
+                         <div class="flex justify-center mb-4">
+                            <div class="bg-teal-100 p-3 rounded-full">
+                                <i data-lucide="flower-2" class="w-8 h-8 accent-color"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-center text-stone-800 mb-3">Terapia Floral</h3>
+                        <p class="text-stone-600 text-center">Uso de essências florais para harmonizar as emoções, tratar questões como ansiedade, estresse e medos, e promover o equilíbrio mental e emocional.</p>
+                    </div>
+                    <!-- Card de Serviço 3 -->
+                    <div class="bg-stone-50/50 p-8 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border-t-4 border-accent-color">
+                         <div class="flex justify-center mb-4">
+                            <div class="bg-teal-100 p-3 rounded-full">
+                                <i data-lucide="leaf" class="w-8 h-8 accent-color"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-center text-stone-800 mb-3">Fitoterapia</h3>
+                        <p class="text-stone-600 text-center">Aplicação terapêutica de plantas medicinais para tratar e prevenir diversas condições de saúde, aproveitando o poder curativo da natureza.</p>
+                    </div>
+                    <!-- Card de Serviço 4 -->
+                    <div class="bg-stone-50/50 p-8 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border-t-4 border-accent-color">
+                         <div class="flex justify-center mb-4">
+                            <div class="bg-teal-100 p-3 rounded-full">
+                                <i data-lucide="bot" class="w-8 h-8 accent-color"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-center text-stone-800 mb-3">Geoterapia</h3>
+                        <p class="text-stone-600 text-center">Tratamento que usa as propriedades terapêuticas das argilas para fins estéticos e medicinais.</p>
+                    </div>
+                    <!-- Card de Serviço 5 -->
+                    <div class="bg-stone-50/50 p-8 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border-t-4 border-accent-color">
+                         <div class="flex justify-center mb-4">
+                            <div class="bg-teal-100 p-3 rounded-full">
+                                <i data-lucide="droplets" class="w-8 h-8 accent-color"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-center text-stone-800 mb-3">Hidroterapia</h3>
+                        <p class="text-stone-600 text-center">Uso terapêutico da água para tratar diferentes patologias e problemas de saúde.</p>
+                    </div>
+                    <!-- Card de Serviço 6 -->
+                    <div class="bg-stone-50/50 p-8 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border-t-4 border-accent-color">
+                         <div class="flex justify-center mb-4">
+                            <div class="bg-teal-100 p-3 rounded-full">
+                                <i data-lucide="sun" class="w-8 h-8 accent-color"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-center text-stone-800 mb-3">Helioterapia</h3>
+                        <p class="text-stone-600 text-center">Exposição gradual e controlada à luz solar para fins terapêuticos e para melhorar a saúde geral.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Seção de Contato e Agendamento =========== -->
+        <section id="contato" class="py-24">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-stone-800">Vamos começar sua jornada?</h2>
+                <p class="text-lg text-stone-500 mt-4 max-w-2xl mx-auto">Estou pronta para ouvir sua história e te guiar em direção a uma vida mais saudável e equilibrada. Entre em contato para agendar sua primeira consulta.</p>
+                <div class="mt-10">
+                     <a href="https://wa.me/5548912345678?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="inline-flex items-center gap-3 bg-accent-color text-white font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:bg-accent-hover transition-transform duration-300 transform hover:scale-105">
+                        <i data-lucide="whatsapp" class="w-6 h-6"></i>
+                        Agendar via WhatsApp
+                    </a>
+                </div>
+                <div class="mt-8 text-stone-600">
+                    <p>Se preferir, envie um e-mail:</p>
+                    <a href="mailto:contato.ilzepetris@email.com" class="text-lg accent-color font-semibold hover:underline">
+                        contato.ilzepetris@email.com
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========== Footer =========== -->
+    <footer class="bg-stone-800 text-stone-300 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="font-bold text-xl text-white">Ilze Petris | Naturologia Integrativa</p>
+            <p class="mt-2 text-sm text-stone-400">&copy; <span id="current-year"></span> Todos os direitos reservados.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="#" class="text-stone-400 hover:text-white transition-colors"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                <a href="#" class="text-stone-400 hover:text-white transition-colors"><i data-lucide="facebook" class="w-6 h-6"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // --- Script para o menu mobile (hambúrguer) ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = mobileMenuButton.querySelector('i'); // Seleciona o elemento do ícone
+
+        mobileMenuButton.addEventListener('click', () => {
+            // Alterna a visibilidade do menu
+            const isHidden = mobileMenu.classList.toggle('hidden');
+
+            // Alterna o ícone entre 'menu' (hambúrguer) e 'x' (fechar)
+            if (isHidden) {
+                menuIcon.setAttribute('data-lucide', 'menu');
+            } else {
+                menuIcon.setAttribute('data-lucide', 'x');
+            }
+            // Renderiza novamente os ícones do Lucide para aplicar a mudança
+            lucide.createIcons();
+        });
+
+        // --- Fechar o menu mobile ao clicar em um link ---
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        for (const link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                // Garante que o ícone volte a ser 'menu' ao fechar o menu clicando em um link
+                menuIcon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        }
+
+        // --- Ativar os ícones Lucide na carga inicial ---
+        lucide.createIcons();
+
+        // --- Atualizar o ano no rodapé ---
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
